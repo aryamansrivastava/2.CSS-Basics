@@ -1,0 +1,99 @@
+/* Flex - Container Properties */
+/* The Flex Container becomes flexible by setting the display property to flex */
+
+*{
+    box-sizing: border-box;
+}
+.container{
+    height: 400px;
+    border: 2px solid green;
+    /* The flex container becomes flexible by setting the display property to flex */
+    /*simply, container ko flex box me convert kar diya hai display-flex se */
+    display: flex;
+
+    /*Ex-> main axis of flex box ko vertical align karna hai 
+    flex dirn ko column karna padenga */
+    
+    flex-direction: column;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    flex-direction: column-reverse;
+    
+    /* flex items ki width ko preserve karna h to flex wrap-wrap karna padenga */
+    flex-wrap: wrap; 
+    flex-wrap: wrap-reverse;
+    flex-wrap: nowrap;
+    /* default no wrap hota hai */
+
+    /* flex-flow me dono property flex dirn and flex wrap ek saath use kar skte h */
+    flex-flow: row wrap;
+ 
+    /* justify-content */
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;  
+    /* space around se keval boxes ke "beech" me equal spacing hogi */
+    justify-content: space-around;
+    /* space-between me first and last box parent container se jud ke rahegi aur baaki boxes ke beech me equal spacing hogi */
+    justify-content: space-between;
+    /* space evenly se saare boxes aur container ke beech me equal spacing hogi */
+    justify-content: space-evenly;
+
+    /* align-items */
+    /* default stretch hi rehti hai */
+    align-items: stretch;
+    align-items: flex-start;
+    align-items: flex-end;
+    align-items: center;
+    align-items:baseline;
+
+    /* width 50px se 300 px karne ki wajah se 2 row ban jaayengi */
+    /* align content */
+    /* in do rows ke "beech ki spacing" handle hoti h "align content" se */
+
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center; 
+    align-content: space-around;
+    align-content: space-between;
+    align-content: space-evenly; 
+
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+
+    gap: 10px;
+} 
+
+/* Flex Items Properties */
+/* The Direct child elements of a flex container automatically becomes flexible(flex) items. */
+/* properties-> Order,Flex grow,flex shrink,flex basis,flex,align self */
+
+.box{
+    border: 1px solid blueviolet;
+    background-color: aquamarine;
+    /* width jab 50px se 300 px karoge to 2 row ban jaayengi */
+    width: 50px;
+    /* flex-shrink: 1; */
+    /* flex-grow: 1; */
+    /* flex-basis: 100px; */
+
+    /* flex->shorthand notation hai jisme 4 property ek saath likh sakte ho */
+    /* flex: order grow shrink basis; */
+    flex: 3 4 2 120px;
+}
+
+#box1{
+    order: 1;
+    align-self: flex-start;
+}
+
+#box3{
+    align-self: flex-end;
+    order: 8;
+}
+
+#box2{
+    order: 8;
+    align-self: stretch;
+}

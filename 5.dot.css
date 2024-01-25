@@ -1,0 +1,84 @@
+.box{
+    border: 1px solid black;
+    height: 200px;
+    width: 150px;
+    background-image: linear-gradient(red,blue);
+    /* from left to right */
+    background-image: linear-gradient(to right,red,blue);
+    /* diagnally */
+    background-image: linear-gradient(to bottom right,red,blue);
+    background-image: linear-gradient(to top left,red,blue);
+    /* from top to bottom */
+    /* default bhi top to bottom hi rehta h */
+    background-image: linear-gradient(to bottom,rgba(255,0,0,0),rgba(0,0,255,1));;
+    background-image: linear-gradient(to bottom,orange,white,green);
+    background-image: linear-gradient(150deg,orange,white,green);
+} 
+
+.mydiv1{
+    border: 1px solid black;
+    margin: 10px;
+    height: 200px;
+    width: 150px;
+    background-image: radial-gradient(circle,red,blue,orange);
+    background-image: radial-gradient(yellow 5%,blue 10%,red 30%);  
+}
+
+h3{
+    text-shadow: 3px 3px 3px red;
+    text-shadow: 3px 3px 3px red, 60px, 60px, 5px green;
+}
+
+.mydiv2{
+    width: 200px;
+    height: 200px;
+    /* default shadow ka color black hota hai */
+    box-shadow: 10px 10px 15px blueviolet;
+    /* for multiple shadow */
+    box-shadow: 10px 10px 15px blueviolet, 5px, 5px, 15px brown;
+    /* for text color */
+    color: firebrick;
+}
+
+.mydiv3{
+    max-height: 90px;
+    border: 1px solid black;
+    overflow: scroll;
+}
+
+.mydiv4{
+    margin: 10px;
+    border: 1px solid black;
+    min-height: 70px;
+}
+
+.example {
+    text-align: start;  
+    /* text align:end,center,justify can also be used*/
+    border: solid;
+  }
+
+.mydiv5{
+    background-color: aquamarine;
+    transform: translate(10px,20px);
+            /* OR */
+    /* transform: translateX(10px);
+    transform: translateY(20px);  */
+    /* transform: rotate(-15deg); */
+
+    margin: 200px;
+    transform: scale(1.5,5);
+         /* OR */
+    /* transition: scaleX(1.5);
+    transition: scaleY(5); */
+
+    transform: skew(45deg);
+
+       /* matrix(a, b, c, d, tx, ty) */
+       /* a b c d
+       Are <number>s describing the linear transformation.
+       tx ty
+       Are <number>s describing the translation to apply. */
+    transform: matrix(1, 2, -1, 1, 80, 80);
+
+}

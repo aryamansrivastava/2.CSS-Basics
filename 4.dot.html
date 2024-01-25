@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors,Specificity,Styling and Box Model in CSS</title>
+
+    <style>
+        /* element selector */
+        p{
+            color: brown;
+            font-size: larger;
+        }
+        h3{
+            background-color: aqua;
+        }
+
+        /* class selector */
+
+        .green{
+            color: goldenrod;
+        }
+        .blue{
+            color:blue;
+        }
+
+        /* Id Selector */
+
+        #submit{
+            color: red;
+        }
+        #intro-para{
+            background-color: coral;
+        }
+
+        /* Pseudo Class Selector */
+
+        button:hover{
+            color: yellow;
+        }
+        a:hover{
+            color: crimson;
+        }
+        .link-color:hover{
+            color: darkgreen;
+        }
+        #link-id:hover{
+            color: darkmagenta;
+        } 
+
+        /* Multiple Selector */
+
+        /* table,tr,td,th{
+            border:1px solid blanchedalmond
+
+        } */
+
+        /* Universal,Nested,Attribute Selector karna h explore */
+
+        /* Specificity */
+        p{
+            color:darkgreen;
+        }
+        .para-sf{
+            color:crimson !important
+        }
+        #black-para{
+            color: chartreuse;
+        }
+
+    </style>
+
+    <!-- how to link external css file with html file -->
+    <link rel="stylesheet" href="dot4.css">
+
+</head> 
+<body>
+
+    <h1>Selectors in CSS</h1>
+
+    <p>This is first para</p>
+    <h3>This is first heading</h3>
+    <h3>This is second heading</h3>
+    <p>Second Para</p>
+
+    <p class="green"> abcd </p> 
+    <p class="green"> pqrs </p>
+    <p class="blue"> xyz </p>
+
+    <button id="submit"> Submit</button>
+    <p id="intro-para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, aliquid!</p>
+    <br>
+
+    <a href="https://www.google.com" target="_blank">Google website</a>  <br>
+    <a class="link-color" href="https://www.google.com" target="_blank">Google website</a>  <br>
+    <a id="link-id" href="https://www.google.com" target="_blank">Google website</a>
+
+    <h1>Add style in CSS</h1>
+
+    <!-- Inline CSS -->
+    <p style="font-style: italic">Hello Guys!</p>
+     
+    <!-- Internal css head tag me (style tag se) apply karte h -->
+    <p> lets apply Internal Css on all the para's </p>
+
+    <!-- External CSS -->
+    <!-- isme ek doosri css file me iski styling hoti h aur text yaha ka hota h -->
+    <p> lets apply External Css on all the para's </p>
+
+    <!-- Specificity -->
+    <!-- Order from lowest to highest -> Element selector(h1,p) then class selectors then ID selectors then Inline CSS -->
+
+    <p class="para-sf" id="black-para" style="color: cadetblue;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+    <!-- Box Model in CSS -->
+    <!-- using external css -->
+    <h1>Box Model in CSS </h1>
+    <div class="box" id="org">A</div>
+    <div class="box" id="wht">B</div>
+    <div class="box" id="grn">C</div>
+
+    <!-- Fonts,Units in Css,percenatage unit ke baare me explore karna hai  -->
+    
+</body>
+</html>
+  
+<hr>
+<hr> 
